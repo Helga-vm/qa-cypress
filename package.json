@@ -1,0 +1,27 @@
+{
+  "name": "qa-cypress",
+  "version": "1.0.0",
+  "description": "Test project for learning cypress basics",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx cypress test",
+    "test:cloud":"npx cypress run --record --key f0c4752c-3050-491f-bc5b-da3744ee9e88",
+    "open": "npx cypress open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Helga-vm/qa-cypress.git"
+  },
+  "keywords": [
+    "learning"
+  ],
+  "author": "Olha K.",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Helga-vm/qa-cypress/issues"
+  },
+  "homepage": "https://github.com/Helga-vm/qa-cypress#readme",
+  "devDependencies": {
+    "cypress": "^15.5.0"
+  }
+}
