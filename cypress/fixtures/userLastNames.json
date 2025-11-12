@@ -1,0 +1,128 @@
+[
+  {
+    "title": "Valid basic check",
+    "input": {
+      "lastName": "Johnson"
+    },
+    "expected": {
+      "message": "Valid"
+    }
+  },
+  {
+    "title": "Valid length - 20 symbols spaces trim (1)",
+    "input": {
+      "lastName": " ABCDEFGHIJKLMNOPQRST"
+    },
+    "expected": {
+      "message": "Valid"
+    }
+  },
+  {
+    "title": "Valid length - 20 symbols spaces trim (2)",
+    "input": {
+      "lastName": "ABCDEFGHIJKLMNOPQRST "
+    },
+    "expected": {
+      "message": "Valid"
+    }
+  },
+  {
+    "title": "Valid length - 20 symbols spaces trim (3)",
+    "input": {
+      "lastName": " ABCDEFGHIJKLMNOPQRST "
+    },
+    "expected": {
+      "message": "Valid"
+    }
+  },
+  {
+    "title": "Invalid length - less than 2 symbols",
+    "input": {
+      "lastName": "J"
+    },
+    "expected": {
+      "message": "Last name has to be from 2 to 20 characters long"
+    }
+  },
+  {
+    "title": "Invalid length - more than 20 symbols",
+    "input": {
+      "lastName": "ABCDEFGHIJKLMNOPQRSTU"
+    },
+    "expected": {
+      "message": "Last name has to be from 2 to 20 characters long"
+    }
+  },
+  {
+    "title": "Invalid length - less than 2 symbols excluding spaces (1)",
+    "input": {
+      "lastName": "A "
+    },
+    "expected": {
+      "message": "Last name has to be from 2 to 20 characters long"
+    }
+  },
+  {
+    "title": "Invalid length - less than 2 symbols excluding spaces (2)",
+    "input": {
+      "lastName": " A"
+    },
+    "expected": {
+      "message": "Last name has to be from 2 to 20 characters long"
+    }
+  },
+  {
+    "title": "Invalid length - less than 2 symbols excluding spaces (3)",
+    "input": {
+      "lastName": " A "
+    },
+    "expected": {
+      "message": "Last name has to be from 2 to 20 characters long"
+    }
+  },
+  {
+    "title": "Invalid format - internal space non-trim",
+    "input": {
+      "lastName": "ABCDEFGHIJ KLMOPQRST"
+    },
+    "expected": {
+      "message": "Last name is invalid"
+    }
+  },
+  {
+    "title": "Invalid format - numbers",
+    "input": {
+      "lastName": "J0hn"
+    },
+    "expected": {
+      "message": "Last name is invalid"
+    }
+  },
+  {
+    "title": "Invalid format - special characters",
+    "input": {
+      "lastName": "J()hn"
+    },
+    "expected": {
+      "message": "Last name is invalid"
+    }
+  },
+  {
+    "title": "Invalid format - cyrilyc",
+    "input": {
+      "lastName": "Joшn"
+    },
+    "expected": {
+      "message": "Last name is invalid"
+    }
+  },
+  {
+    "title": "Invalid format - kana",
+    "input": {
+      "lastName": "Joまn"
+    },
+    "expected": {
+      "message": "Last name is invalid"
+    }
+  }
+]

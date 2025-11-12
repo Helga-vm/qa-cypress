@@ -1,0 +1,191 @@
+[
+  {
+    "title": "Valid basic check",
+    "input": {
+      "email": "test1olha@test.com"
+    },
+    "expected": {
+      "message": "Valid"
+    }
+  },
+  {
+    "title": "Invalid email format - more than one @",
+    "input": {
+      "email": "test1@@test.com"
+    },
+    "expected": {
+      "message": "Email is incorrect"
+    }
+  },
+  {
+    "title": "Invalid email format - without @",
+    "input": {
+      "email": "test1test.com"
+    },
+    "expected": {
+      "message": "Email is incorrect"
+    }
+  },
+  {
+    "title": "Invalid email format - prefix contains a space",
+    "input": {
+      "email": "tes t1tes@test.com"
+    },
+    "expected": {
+      "message": "Email is incorrect"
+    }
+  },
+  {
+    "title": "Invalid email format - prefix starts with a period",
+    "input": {
+      "email": ".t1tes@test.com"
+    },
+    "expected": {
+      "message": "Email is incorrect"
+    }
+  },
+  {
+    "title": "Invalid email format - prefix ends with a period",
+    "input": {
+      "email": "t1tes.@test.com"
+    },
+    "expected": {
+      "message": "Email is incorrect"
+    }
+  },
+  {
+    "title": "Invalid email format - prefix contains more than one consecutive periods",
+    "input": {
+      "email": "t1..tes@test.com"
+    },
+    "expected": {
+      "message": "Email is incorrect"
+    }
+  },
+  {
+    "title": "Invalid email format - prefix contains restricted special characters",
+    "input": {
+      "email": "t/1tes@test.com"
+    },
+    "expected": {
+      "message": "Email is incorrect"
+    }
+  },
+  {
+    "title": "Invalid email format - prefix is too long (more than 64 symbols)",
+    "input": {
+      "email": "ythfjnhbdyeuYu7yebghftdttyyhgdjdhgbvGTYHJ874yGHgfhjeyuhggfdjhfhdjh@test.com"
+    },
+    "expected": {
+      "message": "Email is incorrect"
+    }
+  },
+  {
+    "title": "Invalid email format - domain starts with hyphen",
+    "input": {
+      "email": "teskfjkkfd@-test.com"
+    },
+    "expected": {
+      "message": "Email is incorrect"
+    }
+  },
+  {
+    "title": "Invalid email format - domain ends with hyphen",
+    "input": {
+      "email": "fjkdfkjfkd@test-.com"
+    },
+    "expected": {
+      "message": "Email is incorrect"
+    }
+  },
+  {
+    "title": "Invalid email format - domain does not contein TLD",
+    "input": {
+      "email": "hjjhjhjhjhj@testcom"
+    },
+    "expected": {
+      "message": "Email is incorrect"
+    }
+  },
+  {
+    "title": "Invalid email format - domain is all-numeric",
+    "input": {
+      "email": "dfddfkkjdfjkdf@1234567.com"
+    },
+    "expected": {
+      "message": "Email is incorrect"
+    }
+  },
+  {
+    "title": "Invalid email format - domain is too long",
+    "input": {
+      "email": "dfddfkkjdfjkdf@ythfjnhbdyeuYu7yebghftdttyyhgdjdhgbvGTYHJ874yGHgfhjeyuhggfdjhfhdjhythfjnhbdyeuYu7yebghftdttyyhgdjdhgbvGTYHJ874yGHgfhjeyuhggfdjhfhdjhythfjnhbdyeuYu7yebghftdttyyhgdjdhgbvGTYHJ874yGHgfhjeyuhggfdjhfhdjhythfjnhbdyeuYu7yebghftdttyyhgdjdhgbvGTYHJ874yGHgfhjeyuhggfdjhfhdjhythfjnhbdyeuYu7yebghftdttyyhgdjdhgbvGTYHJ874yGHgfhjeyuhggfdjhfhdjhythfjnhbdyeuYu7yebghftdttyyhgdjdhgbvGTYHJ874yGHgfhjeyuhggfdjhfhdjhythfjnhbdyeuYu7yebghftdttyyhgdjdhgbvGTYHJ874yGHgfhjeyuhggfdjhfhdjhythfjnhbdyeuYu7yebghftdttyyhgdjdhgbvGTYHJ874yGHgfhjeyuhggfdjhfhdjh.com"
+    },
+    "expected": {
+      "message": "Email is incorrect"
+    }
+  },
+  {
+    "title": "Invalid email format - no domain",
+    "input": {
+      "email": "dfddfkkjdfjkdf@.com"
+    },
+    "expected": {
+      "message": "Email is incorrect"
+    }
+  },
+  {
+    "title": "Invalid email format - no prefix",
+    "input": {
+      "email": "@test.com"
+    },
+    "expected": {
+      "message": "Email is incorrect"
+    }
+  },
+  {
+    "title": "Invalid email format - domain contains restricted special characters",
+    "input": {
+      "email": "dfddfkkjdfjkdf@te#st.com"
+    },
+    "expected": {
+      "message": "Email is incorrect"
+    }
+  },
+  {
+    "title": "Invalid email format - without TLD",
+    "input": {
+      "email": "dfddfkkjdfjkdf@test."
+    },
+    "expected": {
+      "message": "Email is incorrect"
+    }
+  },
+  {
+    "title": "Invalid email format - TLD is too short (less than 2 characters)",
+    "input": {
+      "email": "dfddfkkjdfjkdf@test.c"
+    },
+    "expected": {
+      "message": "Email is incorrect"
+    }
+  },
+  {
+    "title": "Invalid email format - TLD is too long (more than 63 characters)",
+    "input": {
+      "email": "dfddfkkjdfjkdf@test.ythfjnhbdyeuYu7yebghftdttyyhgdjdhgbvGTYHJ874yGHgfhjeyuhggfdjhfhdjh"
+    },
+    "expected": {
+      "message": "Email is incorrect"
+    }
+  },
+  {
+    "title": "Invalid email format - TLD contains numbers",
+    "input": {
+      "email": "dfddfkkjdfjkdf@test.c0m"
+    },
+    "expected": {
+      "message": "Email is incorrect"
+    }
+  }
+]
