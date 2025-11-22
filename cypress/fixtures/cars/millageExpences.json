@@ -1,0 +1,57 @@
+[
+    {
+        "title":"Basic valid check",
+        "input":{
+            "millage":2,
+            "numLiters":2.01,
+            "totalCost":2.01
+        },
+        "error":{
+            "message":"Valid"
+        }
+    },
+    {
+        "title":"Invalid millage - more than maximum",
+        "input":{
+            "millage":1000000,
+            "numLiters":2.01,
+            "totalCost":2.01
+        },
+        "error":{
+            "message":"Mileage has to be from 0 to 999999"
+        }
+    },
+    {
+        "title":"Invalid millage - negative number",
+        "input":{
+            "millage":-3,
+            "numLiters":2.01,
+            "totalCost":2.01
+        },
+        "error":{
+            "message":"Mileage has to be from 0 to 999999"
+        }
+    },
+    {
+        "title":"Invalid millage - not a number",
+        "input":{
+            "millage":"one",
+            "numLiters":2.01,
+            "totalCost":2.01
+        },
+        "error":{
+            "message":"Mileage required"
+        }
+    },
+    {
+        "title":"Invalid millage - spaces",
+        "input":{
+            "millage":"  ",
+            "numLiters":2.01,
+            "totalCost":2.01
+        },
+        "error":{
+            "message":"Mileage required"
+        }
+    }
+]

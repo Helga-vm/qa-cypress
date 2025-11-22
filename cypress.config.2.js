@@ -10,11 +10,11 @@ module.exports = defineConfig({
   },
   projectId: "agvymk",
   env: {
-    userEmail: 'olha.k+1@gmail.com',
+    userEmail: 'olha.k+2@gmail.com',
     userPassword: 'Qwerty123'
   },
   e2e: {
-    baseUrl: "https://qauto.forstudy.space",
+    baseUrl: "https://qauto2.forstudy.space",
     watchForFileChanges: false,
     specPattern: "cypress/e2e/**/cars_hw21.1/*.{cy,spec,test}.{js,jsx,ts,tsx}",
     setupNodeEvents(on, config) {

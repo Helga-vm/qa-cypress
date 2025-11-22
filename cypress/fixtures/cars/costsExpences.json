@@ -1,0 +1,68 @@
+[
+    {
+        "title":"Invalid total costs - less than minimun",
+        "input":{
+            "millage": 75,
+            "numLiters":4.09,
+            "totalCost":0.009
+        },
+        "error":{
+            "message":"Total cost has to be from 0.01 to 1000000"
+        }
+    },
+    {
+        "title":"Invalid total costs - zero",
+        "input":{
+            "millage": 75,
+            "numLiters":4.09,
+            "totalCost":0
+        },
+        "error":{
+            "message":"Total cost has to be from 0.01 to 1000000"
+        }
+    },
+    {
+        "title":"Invalid total costs - more than maximum",
+        "input":{
+            "millage": 75,
+            "numLiters":4.09,
+            "totalCost":1000000.01
+        },
+        "error":{
+            "message":"Total cost has to be from 0.01 to 1000000"
+        }
+    },
+    {
+        "title":"Invalid total costs - negative number",
+        "input":{
+            "millage": 75,
+            "numLiters":4.09,
+            "totalCost":-2.09
+        },
+        "error":{
+            "message":"Total cost has to be from 0.01 to 1000000"
+        }
+    },
+    {
+        "title":"Invalid total costs - not a number",
+        "input":{
+            "millage": 75,
+            "numLiters":4.09,
+            "totalCost":"six"
+        },
+        "error":{
+            "message":"Total cost required"
+        }
+    },
+    {
+        "title":"Invalid total costs - spaces",
+        "input":{
+            "millage": 75,
+            "numLiters":4.09,
+            "totalCost":"  "
+        },
+        "error":{
+            "message":"Total cost required"
+        }
+    }
+]
