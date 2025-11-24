@@ -1,0 +1,68 @@
+[
+    {
+        "title":"Invalid number of liters - less than minimum",
+        "input":{
+            "millage": 75,
+            "numLiters":0.009,
+            "totalCost":2.01
+        },
+        "error":{
+            "message":"Liters has to be from 0.01 to 9999"
+        }
+    },
+    {
+        "title":"Invalid number of liters - zero",
+        "input":{
+            "millage": 75,
+            "numLiters":0,
+            "totalCost":2.01
+        },
+        "error":{
+            "message":"Liters has to be from 0.01 to 9999"
+        }
+    },
+    {
+        "title":"Invalid number of liters - more than maximum",
+        "input":{
+            "millage": 75,
+            "numLiters":9999.01,
+            "totalCost":2.01
+        },
+        "error":{
+            "message":"Liters has to be from 0.01 to 9999"
+        }
+    },
+    {
+        "title":"Invalid number of liters - negative number",
+        "input":{
+            "millage": 75,
+            "numLiters":-3.08,
+            "totalCost":2.01
+        },
+        "error":{
+            "message":"Liters has to be from 0.01 to 9999"
+        }
+    },
+    {
+        "title":"Invalid number of liters - not a number",
+        "input":{
+            "millage": 75,
+            "numLiters":"nine",
+            "totalCost":2.01
+        },
+        "error":{
+            "message":"Liters required"
+        }
+    },
+    {
+        "title":"Invalid number of liters - spaces",
+        "input":{
+            "millage": 75,
+            "numLiters":"  ",
+            "totalCost":2.01
+        },
+        "error":{
+            "message":"Liters required"
+        }
+    }
+]

@@ -1,0 +1,65 @@
+[
+    {
+        "title": "Milage is minimum valid value (0)",
+        "input": {
+            "milage": 0
+        },
+        "error": {
+            "message": "Valid"
+        }
+    },
+    {
+        "title": "Milage is maximum valid value (999999)",
+        "input": {
+            "milage": 999999
+        },
+        "error": {
+            "message": "Valid"
+        }
+    },
+    {
+        "title": "Milage is some valid value",
+        "input": {
+            "milage": 137
+        },
+        "error": {
+            "message": "Valid"
+        }
+    },
+    {
+        "title": "Milage is less than minimum",
+        "input": {
+            "milage": "-1"
+        },
+        "error": {
+            "message": "Mileage has to be from 0 to 999999"
+        }
+    },
+    {
+        "title": "Milage is more than maximum",
+        "input": {
+            "milage": 1000000
+        },
+        "error": {
+            "message": "Mileage has to be from 0 to 999999"
+        }
+    },
+    {
+        "title": "Milage is not integer",
+        "input": {
+            "milage": "99.8"
+        },
+        "error": {
+            "message": "Mileage has to be integer"
+        }
+    },
+    {
+        "title": "Milage is not a number",
+        "input": {
+            "milage": "one"
+        },
+        "error": {
+            "message": "Mileage cost required"
+        }
+    }
+]
