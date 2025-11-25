@@ -16,7 +16,7 @@ module.exports = defineConfig({
   e2e: {
     baseUrl: "https://qauto.forstudy.space",
     watchForFileChanges: false,
-    specPattern: "cypress/e2e/**/cars_hw21.1/*.{cy,spec,test}.{js,jsx,ts,tsx}",
+    specPattern: "cypress/e2e/**/*.{cy,spec,test}.{js,jsx,ts,tsx}",
     setupNodeEvents(on, config) {
       // implement node event listeners here
     },
