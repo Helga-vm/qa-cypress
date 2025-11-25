@@ -1,3 +1,4 @@
 /node_modules
 /mochawesome-report
 /notes_and_tryouts
+/cypress/results

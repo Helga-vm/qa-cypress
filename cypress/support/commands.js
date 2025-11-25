@@ -62,3 +62,23 @@ Cypress.Commands.add('login', (email,password,shouldRemember) => {
     });
     
 });
+
+Cypress.Commands.add('register', ({name, lastName, email, password, repeatPassword})=>{
+    cy.visit("/");
+    cy.get('.btn-primary').filter(':contains("Sign up")').click();
+    cy.get('.modal-content').within(()=>{
+            cy.get('#signupName').type(name);
+            cy.get('#signupLastName').type(lastName);
+            cy.get('#signupEmail').type(email);
+            cy.get('#signupPassword').type(password);
+            cy.get('#signupRepeatPassword').type(repeatPassword);
+            cy.get('.btn-primary').click();
+    });
+    cy.location('pathname').should('eq', '/panel/garage');
+});
+
+Cypress.Commands.add('logout',()=>{
+    cy.get('.user-nav_toggle').filter(':contains(" My profile ")').click();
+    cy.get('.btn-link').filter(':contains("Logout")').click();
+    cy.location('pathname').should('eq', '/');
+});
